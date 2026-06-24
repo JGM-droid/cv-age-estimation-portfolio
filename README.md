@@ -1,12 +1,30 @@
 # Customer Age Estimation with Computer Vision
 
-This project explores whether a transfer-learning computer vision model can estimate customer age accurately enough to support age-restricted retail workflows.
+![Age Distribution](visuals/chart_01.png)
+
+This project evaluates whether a transfer-learning computer vision model can estimate customer age accurately enough to support age-restricted retail workflows.
+
+## Project Snapshot
+
+| Metric | Result |
+|---|---:|
+| Dataset size | 7,591 face images |
+| Model backbone | ResNet50 (ImageNet pretrained) |
+| Target metric | MAE < 8.0 |
+| Best validation MAE | ~6.64 |
+| Final validation MAE | ~7.65 |
+| Outcome | Target met |
+
+## Visuals
+
+- Age distribution: ![Age Distribution Histogram](visuals/chart_01.png)
+- Sample training images: ![Sample Faces](visuals/chart_02.png)
 
 ## Highlights
 
 - Built with TensorFlow/Keras and a pretrained ResNet50 backbone.
 - Performed EDA on 7,591 labeled face images.
-- Achieved validation MAE below the target threshold of 8 years.
+- Achieved validation MAE below the required threshold of 8 years.
 - Includes both a polished notebook and a standalone training script.
 
 ## Repository Structure
@@ -14,6 +32,7 @@ This project explores whether a transfer-learning computer vision model can esti
 - `age_estimation_analysis.ipynb`: Recruiter-ready analysis notebook.
 - `age_estimation_analysis_original.ipynb`: Original unedited notebook snapshot.
 - `src/train_age_model.py`: Standalone training pipeline.
+- `visuals/`: Exported notebook charts used in project documentation.
 - `requirements.txt`: Python dependencies.
 
 ## Dataset
@@ -64,4 +83,4 @@ python src/train_age_model.py
 
 ## Why This Matters
 
-An age-estimation system can help flag customers near legal age boundaries for manual verification. It should be used as decision support, not as the sole decision-maker.
+An age-estimation system can help flag customers near legal age boundaries for manual verification. This should be used as decision support, not as the sole decision-maker.
